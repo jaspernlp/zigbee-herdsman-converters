@@ -7441,6 +7441,7 @@ const converters = {
         convertSet: async (entity, key, value, meta) => {
             switch (key) {
             case 'sensitivity':
+            console.log(JSON.stringify(entity));
                 await tuya.sendDataPointEnum(entity, tuya.dataPoints.lmsSensitivity, {'low': 0, 'medium': 1, 'high': 2}[value]);
                 break;
             case 'keep_time':
