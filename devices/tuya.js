@@ -2369,8 +2369,7 @@ module.exports = [
 //        configure: (device, coordinatorEndpoint, logger) => {
 //            console.log('configure');
 //            device.defaultSendRequestWhen('active');
-        },
-
+//
     },
 
 ];
