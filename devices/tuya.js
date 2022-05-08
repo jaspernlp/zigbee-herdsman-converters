@@ -2366,9 +2366,9 @@ module.exports = [
                 .withDescription('PIR keep time in seconds (refresh and update only while active)'),
         ],
         //options: { defaultSendRequestWhen: 'active'},
-        configure: (device, coordinatorEndpoint, logger) => {
-            console.log('configure');
-            device.defaultSendRequestWhen('active');
+//        configure: (device, coordinatorEndpoint, logger) => {
+//            console.log('configure');
+//            device.defaultSendRequestWhen('active');
         },
 
     },
