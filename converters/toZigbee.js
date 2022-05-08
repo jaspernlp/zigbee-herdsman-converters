@@ -7454,6 +7454,7 @@ const converters = {
         convertGet: async (entity, key, meta) => {
             switch (key) {
             case 'sensitivity':
+                entity.defaultSendRequestWhen('active');
                 await tuya.sendDataPointEnum(entity, tuya.dataPoints.lmsSensitivity, 0, 'dataQuery', {sendWhen:'active'} );
                 break;
             case 'keep_time':
