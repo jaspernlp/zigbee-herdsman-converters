@@ -7453,10 +7453,10 @@ const converters = {
         convertGet: async (entity, key, meta) => {
             switch (key) {
             case 'sensitivity':
-                await tuya.sendDataPointEnum(entity, tuya.dataPoints.lmsSensitivity, 0, 'dataQuery' );
+                await tuya.sendDataPointEnum(entity, tuya.dataPoints.lmsSensitivity, 0, 'dataQuery', {sendWhen:'active'} );
                 break;
             case 'keep_time':
-                await tuya.sendDataPointEnum(entity, tuya.dataPoints.lmsKeepTime, 0, 'dataQuery' );
+                await tuya.sendDataPointEnum(entity, tuya.dataPoints.lmsKeepTime, 0, 'dataQuery',{sendWhen:'active'} );
                 break;
             default: // Unknown key
                 meta.logger.warn(`Unhandled key toZigbee.ZG204ZL_lms.convertGet ${key}`);
