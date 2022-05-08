@@ -2369,7 +2369,7 @@ module.exports = [
 //        configure: async (device, coordinatorEndpoint, logger) => {
 //            console.log('configure');
 //            device.defaultSendRequestWhen('active'');
-        },
+//        },
 
     },
 
