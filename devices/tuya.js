@@ -2365,12 +2365,13 @@ module.exports = [
             exposes.enum('keep_time', ea.ALL, ['10', '30', '60', '120'])
                 .withDescription('PIR keep time in seconds (refresh and update only while active)'),
         ],
-        meta: {disableDefaultResponse: false},
         configure: async (device, coordinatorEndpoint, logger) => {
             logger.debug('JSconfigure');
             logger.debug(JSON.stringify(device));
             device.defaultSendRequestWhen('active');
+            device.save();
         },
+        meta: {disableDefaultResponse: false},
     },
 
 ];
