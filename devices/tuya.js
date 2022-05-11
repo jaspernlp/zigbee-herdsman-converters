@@ -2370,7 +2370,7 @@ module.exports = [
             logger.debug(JSON.stringify(device));
             device.defaultSendRequestWhen='active';
             const endpoint = device.getEndpoint(1);
-            var meta = endpoint.hasOwnProperty('meta') ? endpoint.meta : {});
+            var meta = endpoint.hasOwnProperty('meta') ? endpoint.meta : {};
             meta.disableDefaultResponse = false;
             endpoint.meta = meta;
             device.save();
