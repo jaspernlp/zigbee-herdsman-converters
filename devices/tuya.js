@@ -2368,8 +2368,8 @@ module.exports = [
         configure: async (device, coordinatorEndpoint, logger) => {
             logger.debug('JSconfigure');
             logger.debug(JSON.stringify(device));
-            device.defaultSendRequestWhen('active');
-            device.save();
+            device.defaultSendRequestWhen='active';
+//            device.save();
         },
         meta: {disableDefaultResponse: false},
     },
