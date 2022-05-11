@@ -2369,7 +2369,7 @@ module.exports = [
             logger.debug('JSconfigure');
             logger.debug(JSON.stringify(device));
             device.defaultSendRequestWhen='active';
-//            device.save();
+            device.save();
         },
         meta: {disableDefaultResponse: false},
     },
