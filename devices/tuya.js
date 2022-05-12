@@ -2369,7 +2369,7 @@ module.exports = [
                 .withDescription('PIR keep time in seconds (refresh and update only while active)'),
         ],
         configure: async (device, coordinatorEndpoint, logger) => {
-            await configureDeviceForRequestQueuing(device, coordinatorEndpoint, logger);
+            await tuya.configureDeviceForRequestQueuing(device, coordinatorEndpoint, logger);
         },
     },
 
