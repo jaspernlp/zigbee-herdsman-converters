@@ -401,7 +401,7 @@ module.exports = [
             exposes.enum('keep_time', ea.ALL, [30, 60, 120]).withDescription('PIR keep time in seconds'),
         ],
         configure: async (device, coordinatorEndpoint, logger) => {
-            await configureDeviceForRequestQueuing(device, coordinatorEndpoint, logger);
+            await tuya.configureDeviceForRequestQueuing(device, coordinatorEndpoint, logger);
         },
     },
     {
