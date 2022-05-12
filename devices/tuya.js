@@ -400,6 +400,9 @@ module.exports = [
             exposes.enum('sensitivity', ea.ALL, ['low', 'medium', 'high']).withDescription('PIR sensor sensitivity'),
             exposes.enum('keep_time', ea.ALL, [30, 60, 120]).withDescription('PIR keep time in seconds'),
         ],
+        configure: async (device, coordinatorEndpoint, logger) => {
+            await configureDeviceForRequestQueuing(device, coordinatorEndpoint, logger);
+        },
     },
     {
         fingerprint: [{modelID: 'TS0202', manufacturerName: '_TZ3000_mcxw5ehu'}],
@@ -2365,6 +2368,9 @@ module.exports = [
             exposes.enum('keep_time', ea.ALL, ['10', '30', '60', '120'])
                 .withDescription('PIR keep time in seconds (refresh and update only while active)'),
         ],
+        configure: async (device, coordinatorEndpoint, logger) => {
+            await configureDeviceForRequestQueuing(device, coordinatorEndpoint, logger);
+        },
     },
 
 ];
